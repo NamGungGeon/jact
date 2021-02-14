@@ -1,0 +1,83 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "geon.github",
+    "module": "jact",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.6.1",
+      "buildId": "atdjmmpswfcmplhzcspr3uts4u"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "jact-1.0.0.jar",
+          "url": "jact-1.0.0.jar",
+          "size": 3184,
+          "sha512": "cc071b32bd0e11d9d03e0a7274b5b1b910968d6dc934db906a40dd9bc07ce0b4d60ca3ded3cc6ebf13e2fe2aba90066375449fe33c31ac8a6c96611e49fff213",
+          "sha256": "eba7ba5cf63807cfc1d9d29661951e8dae9d23c06851b6ec0177276336b283f5",
+          "sha1": "633ee2c338d7a6896b2e3f4b98b0511609e7a4b5",
+          "md5": "6f7dc8e0eb4357514b596e9aa36f6bf4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.intellij",
+          "module": "annotations",
+          "version": {
+            "requires": "+"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ],
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "annotations",
+              "type": "jar",
+              "extension": "jar"
+            }
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jact-1.0.0.jar",
+          "url": "jact-1.0.0.jar",
+          "size": 3184,
+          "sha512": "cc071b32bd0e11d9d03e0a7274b5b1b910968d6dc934db906a40dd9bc07ce0b4d60ca3ded3cc6ebf13e2fe2aba90066375449fe33c31ac8a6c96611e49fff213",
+          "sha256": "eba7ba5cf63807cfc1d9d29661951e8dae9d23c06851b6ec0177276336b283f5",
+          "sha1": "633ee2c338d7a6896b2e3f4b98b0511609e7a4b5",
+          "md5": "6f7dc8e0eb4357514b596e9aa36f6bf4"
+        }
+      ]
+    }
+  ]
+}

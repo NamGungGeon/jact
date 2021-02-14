@@ -1,0 +1,36 @@
+plugins {
+    id 'maven-publish'
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.intellij:annotations:+@jar'
+}
+
+publishing {
+    repositories{
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/NamGungGeon/jact")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            groupId = 'com.github.geon'
+            version = '1.0.0'
+            artifactId = 'jact'
+            from(components.java)
+        }
+    }
+}
