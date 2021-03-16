@@ -1,8 +1,0 @@
-geon/github/Subscriber.java
- geon.github.Subscriber
-geon/github/State.java
- geon.github.State
-geon/github/Jact.java
- geon.github.Jact
-geon/github/GlobalJact.java
- geon.github.GlobalJact
