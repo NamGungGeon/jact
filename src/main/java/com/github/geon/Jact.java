@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class Jact<StateType extends State> {
+public class Jact<StateType extends Cloneable> {
   public Jact(StateType state) {
     this.state = state;
   }
