@@ -33,7 +33,12 @@ public class Jact<StateType> implements Serializable {
     this.state= newState;
     notifyToSubscribers();
   }
-  
+
+  public void handleState(@NotNull JactHandler<StateType> jHandler){
+    StateType newState= jHandler.handle(getState());
+    setState(newState);
+  }
+
   private void notifyToSubscribers(){
     for(Subscriber<StateType> subscriber: subscribers){
       subscriber.updated(state);
