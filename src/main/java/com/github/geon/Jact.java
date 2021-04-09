@@ -3,13 +3,18 @@ package com.github.geon;
 
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 
-public class Jact<StateType extends Cloneable> {
+public class Jact<StateType> implements Serializable {
+  public static <StateType> Jact<StateType> useJact(StateType stateType){
+    return new Jact<>(stateType);
+  }
   public Jact(StateType state) {
     this.state = state;
   }
