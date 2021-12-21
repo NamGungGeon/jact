@@ -1,8 +1,10 @@
 plugins {
     id 'maven-publish'
+    id 'maven'
     id 'java'
 }
 
+version = '2.0.0-test'
 sourceCompatibility = 1.8
 
 repositories {
@@ -28,8 +30,9 @@ publishing {
     publications {
         gpr(MavenPublication) {
             groupId = 'com.github.geon'
-            version = '2.0.0'
+            version = '2.0.0-test'
             artifactId = 'jact'
+
             from(components.java)
         }
     }
